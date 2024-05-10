@@ -1,6 +1,6 @@
 <template>
 
-    <Card class="nova-mega-filter rounded p-1 overflow-hidden transition"
+    <Card class="nova-mega-filter rounded p-1 transition"
           :style="{ '--columns-desktop': columns || 2 }"
           :class="{ '--active': filtersAreApplied, '': !filtersAreApplied, '--expanded': collapsed }">
 
