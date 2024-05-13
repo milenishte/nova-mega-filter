@@ -98,6 +98,7 @@
         props: [
             'filters',
             'columns',
+            'open',
             'resourceName',
             'viaResource',
             'viaResourceId',
@@ -141,7 +142,7 @@
             await this.initializeState()
         },
         beforeMount() {
-            this.collapsed = this.filtersAreApplied
+            this.collapsed = this.open ? this.open : this.filtersAreApplied
         },
     }
 
@@ -182,6 +183,7 @@
     }
 
     .nova-mega-filter {
+        overflow: visible;
 
         &.\--expanded {
             background-color: rgba(var(--colors-gray-300));

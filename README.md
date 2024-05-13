@@ -61,7 +61,7 @@ class ExampleNovaResource extends Resource {
 
     use MegaFilterTrait;
 
-    public function filters(RequestRequest $request): array
+    public function filters(NovaRequest $request): array
     {
         return [
             MegaFilter::make([ ... ]),
@@ -78,10 +78,21 @@ class ExampleNovaResource extends Resource {
 You can also set how many columns you want to display your filters:
 
 ```php
-public function filters(RequestRequest $request): array
+public function filters(NovaRequest $request): array
 {
     return [
         MegaFilter::make([ ... ])->columns(3),
+    ];
+}
+```
+
+By default, the filter section is collapsed. If you want it to open or expanded initially, you can do:
+
+```php
+public function filters(NovaRequest $request): array
+{
+    return [
+        MegaFilter::make([ ... ])->open(),
     ];
 }
 ```

@@ -37,6 +37,11 @@ class MegaFilter extends MergeValue
         return $this->withMeta([ 'columns' => $columns ]);
     }
 
+    public function open(bool $open = true): self
+    {
+        return $this->withMeta([ 'open' => $open ]);
+    }
+
     private function request(): NovaRequest
     {
         return resolve(NovaRequest::class);
