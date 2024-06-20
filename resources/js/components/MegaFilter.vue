@@ -114,14 +114,10 @@
 
                 this.clearSelectedFilters()
 
-                Nova.$emit('refresh-resources')
-
             },
             onChange() {
 
                 this.filterChanged()
-
-                Nova.$emit('refresh-resources')
 
             },
         },
